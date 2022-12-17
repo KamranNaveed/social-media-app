@@ -9,7 +9,7 @@ function Feed() {
       <div className="feedWrapper">
         <Share/>
         {Posts.map((post)=>(
-          <Post key = {post.id} post={post}/>
+          <Post key={post.id} post={post}/>
         ))}
         <Post/>
       </div>
