@@ -10,13 +10,13 @@ const PostSchema = new mongoose.Schema({
         type: String, 
         max: 500,
     },
-    image: {
+    img: {
         type: String,
     },
     likes: {
         type: Array,
         default: [],
     }
-})
+}, {timestamps: true})
 
 module.exports = mongoose.model("Post", PostSchema)

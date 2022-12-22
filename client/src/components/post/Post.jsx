@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import {format} from 'timeago.js'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/AuthContext'
 
 
 function Post({post}) {
@@ -12,6 +14,12 @@ function Post({post}) {
     const [isLiked, setIsLiked] = useState(false)
     const [user, setUser] = useState({})
     const PF = process.env.REACT_APP_PUBLIC_FOLDER
+    const {user: currentUser} = useContext(AuthContext)
+
+
+    useEffect(()=>{
+        setIsLiked(post?.likes.includes(currentUser._id))
+    }, [currentUser._id, post?.likes])
 
     useEffect(()=>{
         const fetchUser = async () => {
@@ -22,7 +30,12 @@ function Post({post}) {
       }, [post?.userId])
     
 
-    const likeHandler = () => {
+    const likeHandler = async () => {
+        try {
+            await axios.put(`/posts/${post._id}/like`, {userId: currentUser._id})
+        } catch (error) {
+            
+        }
         setLike(isLiked ? like - 1: like + 1)
         setIsLiked(!isLiked)
     }
@@ -34,7 +47,7 @@ function Post({post}) {
             <div className="postTop">
                 <div className="postTopLeft">
                     <Link to={`/profile/${user.username}`}>
-                        <img src={user?.profilePicture || PF+"person/noAvatar.png"} className='postProfileImg' alt="Profile" />
+                        <img src={user?.profilePicture ? PF+user.profilePicture : PF+"person/noAvatar.png"} className='postProfileImg' alt="Profile" />
                     </Link>
                     <span className="postUsername">{user?.username}</span>
                     <span className="postDate">{format(post?.createdAt)}</span>
@@ -45,7 +58,7 @@ function Post({post}) {
             </div>
             <div className="postCenter">
                 <span className="postText">{post?.desc}</span>
-                {post?.img && <img src = {PF+post.img} alt="" className="postImg" />}
+                {post?.img && <img src = {PF+post?.img} alt="" className="postImg" />}
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
