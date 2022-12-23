@@ -1,4 +1,4 @@
-import { PermMedia, Label, Room, EmojiEmotions } from '@mui/icons-material'
+import { PermMedia, Label, Room, EmojiEmotions, Cancel } from '@mui/icons-material'
 import axios from 'axios'
 import { useState } from 'react'
 import { useContext, useRef } from 'react'
@@ -30,7 +30,7 @@ function Share() {
         }
         try {
             await axios.post("/posts", newPost)
-            //  window.location.reload()
+            window.location.reload()
         } catch (error) {
             console.log(error)
         }
@@ -45,6 +45,12 @@ function Share() {
                 <input type="text" placeholder={"What's on your mind? "+user?.username} className="shareInput" ref={desc}/>
             </div>
             <hr className="shareHr" />
+            {file && (
+                <div className="shareImgContainer">
+                    <img src={URL.createObjectURL(file)} alt="File to be shared" className="shareImg" />
+                    <Cancel className="shareCancelImg" onClick={()=>setFile(null)}/>
+                </div>
+            )}
             <form className="shareBottom" onSubmit={submitHandler}>
                 <div className="shareOptions">
                     <label htmlFor="file" className="shareOption">
