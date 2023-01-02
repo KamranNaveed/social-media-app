@@ -22,7 +22,9 @@ mongoose.connect(process.env.MONGO, {useNewUrlParser: true}, ()=>{
 app.use("/images", express.static(path.join(__dirname, "public/images")) )
 
 //middleware
-app.use(cors())
+app.use(cors({
+    origin: ["https://localhost:3000","https://kamisocial.onrender.com/api"]
+}))
 app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
