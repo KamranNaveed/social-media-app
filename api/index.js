@@ -23,7 +23,7 @@ app.use("/images", express.static(path.join(__dirname, "public/images")) )
 
 //middleware
 app.use(cors({
-    origin: ["https://localhost:3000","https://kamisocial.onrender.com/api"]
+    origin: ["https://localhost:3000","https://kamisocial.onrender.com/"]
 }))
 app.use(express.json())
 app.use(helmet())
