@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "66.241.125.124/api"
+  "proxy": "https://kamisocial-server.onrender.com/api"
 }
