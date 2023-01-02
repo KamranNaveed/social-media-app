@@ -4,7 +4,7 @@ import Online from "../online/Online"
 import axios from "axios"
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
-import { Add, FireTruckRounded, Remove } from "@mui/icons-material"
+import { Add, Remove } from "@mui/icons-material"
 import { AuthContext } from "../../context/AuthContext"
 
 function Rightbar({user}) {
