@@ -26,7 +26,7 @@ function Login() {
                     <input placeholder="Email" type="email" required className="loginInput" ref = {email} />
                     <input placeholder="Password" type="password" required minLength = "6" className="loginInput" ref = {password}/>
                     <button className="loginButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Login"}</button>
-                    {error && <span>Wrong Password or Email</span>}
+                    {error && <span className="errorMessage">Wrong Password or Email</span>}
                     <span className="loginForgot">Forgot Password</span>
                     <button className="loginRegisterButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Create New Account"}</button>
                 </form>
