@@ -3,6 +3,7 @@ import "./login.css"
 import {loginCall} from "../../apiCalls"
 import { AuthContext } from "../../context/AuthContext"
 import { CircularProgress } from "@mui/material"
+import { Link } from "react-router-dom"
 
 function Login() {
     const email = useRef()
@@ -18,7 +19,7 @@ function Login() {
     <div className="loginContainer">
         <div className="loginWrapper">
             <div className="loginLeft">
-                <h3 className="loginLogo">Kamisocial</h3>
+                <h3 className="loginLogo">KamiSocial</h3>
                 <span className="loginDesc">Connect with friends and the world around you on Kamisocial</span>
             </div>
             <div className="loginRight">
@@ -28,7 +29,9 @@ function Login() {
                     <button className="loginButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Login"}</button>
                     {error && <span className="errorMessage">Wrong Password or Email</span>}
                     <span className="loginForgot">Forgot Password</span>
-                    <button className="loginRegisterButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Create New Account"}</button>
+                    <Link to='/register' className="buttonContainer" style={{textDecoration: "none"}}>
+                        <button className="loginRegisterButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Create New Account"}</button>
+                    </Link>
                 </form>
             </div>
         </div>

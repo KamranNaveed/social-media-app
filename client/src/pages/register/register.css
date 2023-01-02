@@ -11,6 +11,8 @@
     width: 70%;
     height: 70%;
     display: flex;
+    gap: 20px;
+
 }
 
 .registerLeft, .registerRight{
@@ -80,4 +82,10 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
