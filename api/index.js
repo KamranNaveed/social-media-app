@@ -22,9 +22,7 @@ mongoose.connect(process.env.MONGO, {useNewUrlParser: true}, ()=>{
 app.use("/images", express.static(path.join(__dirname, "public/images")) )
 
 //middleware
-app.use(cors({
-    origin: ["https://localhost:3000","https://kamisocial.onrender.com/"]
-}))
+app.use(cors())
 app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
@@ -57,18 +55,3 @@ app.listen(process.env.PORT, () => {
     console.log("Backend server running")
 })
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-// PATH CONFIGURATION TO RESPOND TO A REQUEST TO STATIC ROUTE REQUEST BY SERVING index.html
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
-}
