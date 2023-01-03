@@ -9,7 +9,8 @@ const authRoute = require("./routes/auth")
 const postRoute = require("./routes/posts")
 const multer = require("multer")
 const path = require("path")
-const cors = require("cors")
+const cors = require("cors");
+const { nextTick } = require("process");
 
 const app = express();
 dotenv.config();
@@ -46,7 +47,10 @@ app.post("/api/upload", upload.single("file"), (req, res)=>{
 })
 
 //Test
-app.get("/", ()=>{console.log("hello from backend")})
+app.use("/", (req, res, next)=>{
+    console.log(__dirname)
+    next()
+})
 
 app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
