@@ -19,7 +19,6 @@ mongoose.connect(process.env.MONGO, {useNewUrlParser: true}, ()=>{
     console.log("Connected to Database")
 })
 
-app.use("/images", express.static(path.join(__dirname, "public/images")) )
 
 //middleware
 app.use(cors())
@@ -46,6 +45,8 @@ app.post("/api/upload", upload.single("file"), (req, res)=>{
     }
 })
 
+//Test
+app.get("/", ()=>{console.log("hello from backend")})
 
 app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
