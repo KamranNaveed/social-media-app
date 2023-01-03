@@ -22,7 +22,9 @@ mongoose.connect(process.env.MONGO, {useNewUrlParser: true}, ()=>{
 
 
 //middleware
-app.use(cors())
+app.use(cors({
+    origin: ["https://localhost:3000", "https://kamisocial.onrender.com"]
+}))
 app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
