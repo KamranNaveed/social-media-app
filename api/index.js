@@ -26,7 +26,9 @@ app.use(cors({
     origin: ["https://localhost:3000", "https://kamisocial.onrender.com"]
 }))
 app.use(express.json())
-app.use(helmet())
+app.use(helmet({
+    crossOriginResourcePolicy: false,
+  }))
 app.use(morgan("common"))
 
 //Do not recommend uploading files to server. Server should only handle REST calls. This is only for demonstration
