@@ -46,11 +46,6 @@ app.post("/api/upload", upload.single("file"), (req, res)=>{
     }
 })
 
-//Test
-app.use("/", (req, res, next)=>{
-    console.log(__dirname)
-    next()
-})
 
 app.use("/api/users", userRoute)
 app.use("/api/auth", authRoute)
