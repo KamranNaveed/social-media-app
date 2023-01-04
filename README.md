@@ -16,6 +16,15 @@ A live deployment is available to test [here](https://kamisocial.onrender.com)
 <hr>
 <br>
 
+##ToDo
+
+- [ ] Fix Bugs
+- [ ] Fix Bugs
+- [ ] Fix Bugs
+- [ ] Fix Bugs
+- [ ] Fix Bugs
+- [ ] Fix Bugs
+
 ## Getting started
 
 To get the app up and running on your local machine, follow these steps:
