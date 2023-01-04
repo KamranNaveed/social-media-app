@@ -16,7 +16,7 @@ A live deployment is available to test [here](https://kamisocial.onrender.com)
 <hr>
 <br>
 
-##ToDo
+## ToDo
 
 - [ ] Fix Bugs
 - [ ] Fix Bugs
