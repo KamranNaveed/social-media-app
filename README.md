@@ -35,7 +35,7 @@ npm install
 ```
 - Set up the environment variables:
 
-Create a ```.env``` file with the necessary values for the environment variables. These include the database URI, alias ```MONGO``` and server port for development.
+Create a ```.env``` file with the necessary values for the environment variables. These include the database URI, alias ```MONGO```, and server port for development.
 
 - Start the development server:
 ```
