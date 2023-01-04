@@ -26,11 +26,11 @@ function Login() {
                 <form className="loginBox" onSubmit={handleClick}>
                     <input placeholder="Email" type="email" required className="loginInput" ref = {email} />
                     <input placeholder="Password" type="password" required minLength = "6" className="loginInput" ref = {password}/>
-                    <button className="loginButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Login"}</button>
+                    <button className="loginButton" disabled={isFetching}>{isFetching ? "Logging in..." : "Login"}</button>
                     {error && <span className="errorMessage">Wrong Password or Email</span>}
                     <span className="loginForgot">Forgot Password</span>
                     <Link to='/register' className="buttonContainer" style={{textDecoration: "none"}}>
-                        <button className="loginRegisterButton" disabled={isFetching}>{isFetching ? <CircularProgress color="white" size="20px"/> : "Create New Account"}</button>
+                        <button className="loginRegisterButton" disabled={isFetching}>Create New Account</button>
                     </Link>
                 </form>
             </div>
