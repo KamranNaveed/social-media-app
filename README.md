@@ -19,11 +19,11 @@ A live deployment is available to test [here](https://kamisocial.onrender.com)
 ## ToDo
 
 - [ ] Fix Bugs
-- [ ] Fix Bugs
-- [ ] Fix Bugs
-- [ ] Fix Bugs
-- [ ] Fix Bugs
-- [ ] Fix Bugs
+
+
+<br>
+<hr>
+<br>
 
 ## Getting started
 
