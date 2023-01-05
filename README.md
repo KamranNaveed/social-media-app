@@ -12,18 +12,14 @@ This is a Facebook Clone social media app, developed using the MERN stack (Mongo
 
 A live deployment is available to test [here](https://kamisocial.onrender.com)
 
-<br>
 <hr>
-<br>
 
 ## ToDo
 
 - [ ] Fix Bugs
 
 
-<br>
 <hr>
-<br>
 
 ## Getting started
 
