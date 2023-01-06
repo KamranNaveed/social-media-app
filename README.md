@@ -16,7 +16,10 @@ A live deployment is available to test [here](https://kamisocial.onrender.com)
 
 ## To Do:
 
-- [ ] Fix Bugs
+- [ ] Friends system is not dynamic. Add friends list and online friends feature
+- [ ] Integrate newsfeed notification system. Notify user when their friends post, comment or like.
+- [ ] Add chatting system so users can message each other
+- [ ] Improve media sharing feature. Have yet to add location sharing and tags
 
 
 <hr>
