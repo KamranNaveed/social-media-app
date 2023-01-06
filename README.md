@@ -14,7 +14,7 @@ A live deployment is available to test [here](https://kamisocial.onrender.com)
 
 <hr>
 
-## ToDo
+## To Do:
 
 - [ ] Fix Bugs
 
@@ -28,7 +28,7 @@ To get the app up and running on your local machine, follow these steps:
 - Clone the repository to your local machine:
 
 ```
-git clone https://github.com/[USERNAME]/[REPO-NAME].git
+git clone https://github.com/KamranNaveed/kamisocial.git
 ```
 - Navigate to the api directory:
 ```
