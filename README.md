@@ -21,7 +21,7 @@ This is a Facebook Clone social media app, developed using the MERN stack (Mongo
 
 <br>
 
-A live deployment is available to test [here](https://kamisocial.onrender.com)
+A live deployment is available to test [here](https://kamisocial.onrender.com). For now, this site is best viewed on a desktop.
 
 <hr>
 
